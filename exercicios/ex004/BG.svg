@@ -1,0 +1,37 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <title>Logo Bruno Gorte</title>
+  <desc>Logo com as iniciais BG em design moderno e elegante</desc>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="#1a1a18"/>
+
+  <!-- Outer hexagon dark -->
+  <polygon points="250,40 370,109 370,247 250,316 130,247 130,109"
+    fill="#2C2C2A"/>
+
+  <!-- Inner accent hexagon -->
+  <polygon points="250,62 344,115 344,221 250,274 156,221 156,115"
+    fill="none" stroke="#5DCAA5" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Inner thin hexagon -->
+  <polygon points="250,80 326,125 326,215 250,260 174,215 174,125"
+    fill="none" stroke="#5DCAA5" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Monogram B -->
+  <text x="213" y="212" font-family="Georgia, serif" font-size="90" font-weight="700"
+    fill="#E1F5EE" text-anchor="middle">B</text>
+
+  <!-- Monogram G -->
+  <text x="290" y="212" font-family="Georgia, serif" font-size="90" font-weight="700"
+    fill="#5DCAA5" text-anchor="middle">G</text>
+
+  <!-- Divider dot -->
+  <circle cx="250" cy="170" r="4" fill="#5DCAA5" opacity="0.8"/>
+
+  <!-- Name below -->
+  <text x="250" y="370" font-family="Georgia, serif" font-size="16" font-weight="400"
+    fill="#888780" text-anchor="middle" letter-spacing="6">BRUNO GORTE</text>
+
+  <!-- Thin underline -->
+  <line x1="155" y1="382" x2="345" y2="382" stroke="#5DCAA5" stroke-width="0.75" opacity="0.6"/>
+</svg>

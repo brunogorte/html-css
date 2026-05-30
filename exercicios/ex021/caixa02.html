@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!-- Declara o documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma do documento como português brasileiro -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala da página em dispositivos móveis -->
+    <title>Gruping Tags</title> <!-- Título exibido na aba do navegador -->
+    <style> 
+        body { /* Estiliza o corpo da página */
+            font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão usada no site */
+            background-color: rgba(89, 134, 119, 0.457); /* Define a cor de fundo com transparência */
+            margin: 0px; /* Remove a margem padrão do navegador */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+        h1{
+            text-align: center;
+        }
+        header { /* Estiliza a área do cabeçalho */        
+            background-color: white; /* Fundo branco no cabeçalho */
+            padding: 10px; /* Espaço interno ao redor do conteúdo do cabeçalho */
+            margin: 10px; /* Espaço externo ao redor do cabeçalho */
+            border-radius: 10px ;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.539);
+        }
+        nav { /* Estiliza a barra de navegação */
+            background-color: rgb(119, 153, 144); /* Fundo verde-acinzentado da navegação */
+            color: black; /* Cor do texto padrão no nav */
+            font-weight: bolder; /* Texto em negrito na navegação */
+            padding: 2px; /* Espaço interno em torno dos itens de navegação */
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.659); /* Sombra leve em torno da barra de navegação */
+        }
+        nav > a { /* Estiliza os links diretamente filhos de nav */
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: white; /* Torna o texto dos links branco */
+            font-weight: bolder; /* Torna os links em negrito */
+            margin-right: 30px; /* Espaço à direita entre cada link */
+            text-align: center;
+           
+        }
+        nav > a:hover { /* Estiliza o link quando o mouse passa por cima */
+            text-decoration: underline; /* Adiciona sublinhado no hover */
+            
+        }
+        main { /* Estiliza a área principal do conteúdo */
+            background-color: white; /* Fundo branco para o conteúdo principal */
+            padding: 10px; /* Espaço interno ao redor do conteúdo principal */
+            margin: 10px; /* Espaço externo ao redor da área principal */
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.552);
+        }
+        article { /* Estiliza cada bloco de artigo */
+            background-color: rgb(221, 229, 217); /* Fundo cinza claro do artigo */
+            padding: 1px; /* Espaço interno muito pequeno */
+            margin: -1px; /* Ajuste de margem para reduzir espaçamento */
+        }
+        article > aside { /* Estiliza a seção lateral dentro de article */
+            background-color: rgb(177, 213, 201); /* Fundo verde claro do aside */
+            color: rgb(43, 6, 6); /* Cor do texto dentro do aside */
+            width: 190px; /* Largura fixa do aside */
+            font-weight: bolder; /* Texto em negrito dentro do aside */
+        }
+        footer { /* Estiliza o rodapé da página */
+            background-color: black; /* Fundo preto do rodapé */
+            color: white; /* Texto branco no rodapé */
+            text-align: center; /* Centraliza o texto no rodapé */
+            padding: 4px; /* Espaço interno mínimo no rodapé */
+           
+        }
+        footer > p{
+            margin: 0px; /* Remove margem externa do rodapé */
+        }
+
+    </style> <!-- Fim dos estilos CSS internos -->
+</head>
+
+<body> <!-- Início do corpo da página -->
+    <header> <!-- Cabeçalho principal do site -->
+        <h1>Meu site</h1> <!-- Título principal do site -->
+        <nav > <!-- Área de navegação com links principais -->
+            <a href="#">Link</a> <!-- Link de navegação -->
+            <a href="#">Link</a> <!-- Link de navegação -->
+            <a href="#">Link</a> <!-- Link de navegação -->
+            <a href="#">Link</a> <!-- Link de navegação -->
+            <a href="#">Link</a> <!-- Link de navegação -->
+        </nav>
+    </header>
+    <main> <!-- Conteúdo principal da página -->
+        <section id="assuntos"> <!-- Seção para assuntos ou conteúdos adicionais -->
+        </section>
+        <section id="noticia"> <!-- Seção para notícias ou artigos -->
+            <article> <!-- Bloco de artigo com conteúdo textual -->
+                <h1>Notícia sobre o Brasil</h1> <!-- Título do artigo -->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio quas ratione perferendis odit omnis iusto, porro consectetur minus in veniam nihil tempore, eveniet officia impedit. Vel praesentium in magni provident.</p> <!-- Parágrafo com texto de exemplo -->
+                <aside> <!-- Caixa lateral com informação adicional sobre o artigo -->
+                    <p>Artigo escrito por mim</p> <!-- Texto de autoria do artigo -->
+                </aside>
+            </article>
+            <article> <!-- Segundo artigo vazio para fins de estrutura -->
+            </article>
+        </section>
+    </main>
+    <footer> <!-- Rodapé do site -->
+        <p>Desenvolvido por Bruno gorte</p> <!-- Texto de crédito ou autoria -->
+    </footer>
+</body>
+
+</html>

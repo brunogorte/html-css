@@ -1,0 +1,20 @@
+<!DOCTYPE html> <!-- Declara que este documento está usando HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma do documento como português brasileiro -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala para dispositivos móveis -->
+    <title>Bordas personalizada</title> <!-- Título exibido na aba do navegador -->
+    <style> 
+        h1 { /* Seleciona o elemento h1 */
+            border: 19px solid black; /* Define uma borda sólida preta de 19px ao redor do h1 */
+            padding: 10px; /* Espaço interno ao redor do conteúdo do h1 */
+            border-image-source: url('borda.png'); /* Define a imagem usada para a borda */
+            border-image-slice: 37; /* Divide a imagem da borda em partes (pixels) */
+            border-image-repeat: repeat; /* Repete a imagem da borda ao longo do contorno */
+        }
+    </style> <!-- Fim dos estilos CSS internos -->
+</head>
+<body> <!-- Início do corpo da página -->
+    <h1>Teste de borda</h1> <!-- Texto principal usado para demonstrar a borda personalizada -->
+</body>
+</html>
