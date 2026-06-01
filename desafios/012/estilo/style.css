@@ -1,111 +1,160 @@
 @charset "UTF-8";
+/* Define a codificação de caracteres do arquivo CSS */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Give+You+Glory&family=Passion+One:wght@400;700;900&family=Rock+Salt&display=swap');
+/* Importa fontes do Google Fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Give+You+Glory&family=Passion+One:wght@400;700;900&family=Rock+Salt&family=Sriracha&display=swap');
+/* Importa mais fontes do Google Fonts */
 
 :root {
     --fonte1: Verdana, geneva, tahoma, sans-serif;
+    /* Variável para fonte padrão */
     --fonte2: "Passion One", sans-serif;
+    /* Variável para título */
     --fonte3: "Sriracha", cursive;
+    /* Variável para textos de seção */
 }
 
 * {
     margin: 0px;
+    /* Remove margens padrão de todos os elementos */
     padding: 0px;
+    /* Remove preenchimento padrão de todos os elementos */
 }
 
 html,
 body {
     min-height: 100vh;
+    /* Garante que a página ocupe pelo menos a altura da tela */
     background-color: darkgray;
+    /* Define a cor de fundo da página */
     font-family: var(--fonte1);
+    /* Aplica a fonte padrão às páginas */
 }
 
 header {
     background-color: black;
+    /* Fundo preto no cabeçalho */
     color: white;
+    /* Texto branco no cabeçalho */
     text-align: center;
+    /* Centraliza o conteúdo */
 
 }
 
 header>h1 {
     padding: 50px;
+    /* Espaço interno em torno do título */
     font-variant: small-caps;
+    /* Mostra o texto em versalete */
     font-family: var(--fonte2);
+    /* Usa a fonte do título */
     font-size: 10vw;
+    /* Torna o tamanho do título responsivo */
 
 }
 
 header>p {
     padding-bottom: 50px;
+    /* Espaçamento embaixo do parágrafo do cabeçalho */
 
 }
 
 header a,
 footer a {
     color: white;
+    /* Links em branco no cabeçalho e rodapé */
     text-decoration: none;
+    /* Remove sublinhado dos links */
     font-weight: bold;
+    /* Deixa os links em negrito */
 
 }
 
 header a:hover,
 footer a:hover {
     text-decoration: underline;
+    /* Sublinha o link ao passar o mouse */
 }
 
 section {
     padding-top: 10vh;
+    /* Espaço superior nas seções */
     padding-bottom: 10vh;
+    /* Espaço inferior nas seções */
     line-height: 2em;
+    /* Altura de linha para facilitar a leitura */
     padding-left: 30px;
+    /* Espaço à esquerda do conteúdo */
     font-family: var(--fonte3);
+    /* Usa a fonte cursiva nas seções */
     font-size: 3.5vw;
+    /* Tamanho da fonte com base na largura da tela */
 }
 
 section>p {
     padding: 2em;
+    /* Espaçamento interno dos parágrafos */
 }
 
 section.normal {
     background-color: white;
+    /* Fundo branco em seções normais */
     color: black;
+    /* Texto preto em seções normais */
 }
 
 section.imagem {
     background-color: rgb(52, 50, 50);
+    /* Fundo escuro para seções com imagem */
     color: white;
+    /* Texto branco sobre a imagem */
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.573);
+    /* Sombra leve ao redor da seção */
     background-size: cover;
+    /* Faz a imagem cobrir toda a área da seção */
     background-attachment: fixed;
+    /* Mantém a imagem fixa ao rolar a página */
 
 
 }
 
 section.imagem>p {
     display: inline-block;
+    /* Faz o parágrafo ajustar-se ao conteúdo */
     padding: 5px;
+    /* Pequeno espaçamento interno ao redor do texto */
     background-color: rgba(0, 0, 0, 0.511);
+    /* Fundo semitransparente para legibilidade */
     text-shadow: 2px 2px black;
-   
+    /* Sombra no texto para melhor contraste */
+
 }
 
 
 section#img01 {
     background-image: url(../imagens/background001.jpg);
+    /* Define a imagem de fundo da primeira seção */
     background-position: right center;
+    /* Posiciona a imagem à direita */
 }
 
 section#img02 {
     background-image: url(../imagens/background002.jpg);
+    /* Define a imagem de fundo da segunda seção */
     background-position: right center;
+    /* Posiciona a imagem à direita */
 
 }
 
 footer {
     background-color: black;
+    /* Fundo preto do rodapé */
     color: white;
+    /* Texto branco no rodapé */
     text-align: center;
+    /* Centraliza o conteúdo do rodapé */
     padding: 10px;
+    /* Espaço interno no rodapé */
 }
