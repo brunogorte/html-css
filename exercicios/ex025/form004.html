@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Declara que este documento segue o padrão HTML5 -->
+<html lang="pt-br">
+<!-- Elemento raiz do documento; atributo lang informa o idioma principal (português do Brasil) -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentuação e símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Controla o comportamento de zoom/escala em dispositivos móveis; garante responsividade básica -->
+    <title>Formulário</title>
+    <!-- Texto exibido na aba do navegador e usado por mecanismos de pesquisa como título da página -->
+</head>
+
+<body>
+    <h1>Exemplo de formulário</h1>
+    <!-- Cabeçalho principal da página, descreve o conteúdo imediato da página -->
+    <form action="#" method="get" autocomplete="on">
+        <!-- Elemento que agrupa controles de entrada do usuário.
+             - action="#": Submete os dados para a mesma URL (padrão de exemplo).
+             - method="get": Envia os dados na query string da URL (visível na barra de endereços).
+             - autocomplete="on": Permite que o navegador sugira e preencha valores salvos.
+        -->
+        <fieldset>
+            <!-- Agrupa visualmente campos relacionados e melhora acessibilidade para leitores de tela -->
+            <legend style="text-align: center;">Dados pessoais</legend>
+            <!-- Texto descritivo do conjunto de campos (legend), com alinhamento central via estilo inline -->
+            <p>
+                <!-- Bloco de parágrafo usado aqui apenas para espaçamento/organização do formulário -->
+                <label for="inome">Nome</label>
+                <!-- Label associado ao campo de entrada pelo atributo for (melhora usabilidade e acessibilidade) -->
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+                <!--
+                    Campo de texto para o nome do usuário.
+                    - type="text": campo de texto livre.
+                    - name="nome": nome do parâmetro enviado no formulário.
+                    - id="inome": identificador único usado pelo label e por scripts/estilos.
+                    - minlength="5": exige no mínimo 5 caracteres (validação no lado do cliente).
+                    - maxlength="20": limita a entrada a 20 caracteres (previne entradas muito longas).
+                    - required: torna o preenchimento obrigatório antes do envio.
+                -->
+            </p>
+            <p>
+                <label for="iemail">Email</label>
+                <!-- Rótulo para o campo de email, vincula via for ao input correspondente -->
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+                <!--
+                    Campo específico para endereços de e-mail.
+                    - type="email": ativa validação básica de formato (ex.: contém '@') e teclados apropriados em mobiles.
+                    - autocomplete="email": sugere endereços salvos pelo navegador.
+                    - required: impede envio sem preencher este campo.
+                -->
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <!-- Rótulo para o campo de telefone -->
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^\(\d{2}\)d{4,5}-\d{4,5}" placeholder="(00)99999-9999">
+                <!--
+                    Campo para telefone com atributos importantes:
+                    - type="tel": indica que o conteúdo esperado é um telefone; não aplica validação de formato por si só.
+                    - autocomplete="tel": permite sugestões de números salvos.
+                    - required: campo obrigatório.
+                    - pattern: expressão regular para validar o formato do número no lado do cliente.
+                      * Aqui a expressão visa forçar um formato como (00)9999-9999 ou (00)99999-9999.
+                      * Observação: a sintaxe da expressão deve ser cuidadosamente escrita; caracteres especiais precisam ser escapados.
+                    - value="(00)": valor inicial/tipo placeholder implícito, ajuda o usuário a entender o formato esperado.
+                -->
+            </p>
+        </fieldset>
+        <p>
+            <!-- Botão para enviar os dados do formulário ao servidor/URL especificada em 'action' -->
+            <input type="submit" value="Enviar">
+            <!-- Botão que restaura os valores do formulário aos seus estados iniciais -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+
+</body>
+
+</html>

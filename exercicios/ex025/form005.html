@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- Declara o documento como HTML5 -->
+<html lang="en">
+<!-- Elemento raiz HTML; lang="en" indica que o idioma principal da página é inglês -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentuação e símbolos especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a largura e a escala da página em dispositivos móveis para melhorar a responsividade -->
+    <title>Formulário</title>
+    <!-- Título exibido na aba do navegador e usado por mecanismos de busca como título da página -->
+</head>
+
+<body>
+    <h1>Exemplo de formulário</h1>
+    <!-- Cabeçalho principal da página para indicar o propósito geral do conteúdo -->
+    <form action="#" method="get" autocomplete="on">
+        <!-- Formulário HTML para enviar dados do usuário.
+         - action="#": os dados serão enviados para a mesma página (uso comum em exemplos).
+         - method="get": envia os dados como parâmetros na URL.
+         - autocomplete="on": permite que o navegador ofereça preenchimento automático dos campos.
+    -->
+        <fieldset>
+            <!-- Agrupa campos relacionados à seleção de sexo e melhora a acessibilidade. -->
+            <legend>Sexo</legend>
+            <!-- Título do grupo de campos que descreve o conjunto de opções. -->
+            <input type="radio" name="sexo" id="isxmas" value="m" checked>
+            <!--
+                Botão de opção para selecionar Masculino.
+                - type="radio": define um botão de opção.
+                - name="sexo": agrupa os botões de opção para que apenas um seja selecionado.
+                - id="isxmas": identificador único do input.
+                - value="m": valor enviado se esta opção estiver selecionada.
+                - checked: seleciona esta opção por padrão quando a página carrega.
+            -->
+            <label for="isxmas">Masculino</label>
+            <!-- Rótulo associado ao botão de opção. Clicar no texto seleciona a opção. -->
+            <br>
+            <!-- Cria uma quebra de linha para separar visualmente as opções. -->
+            <input type="radio" name="sexo" id="isxfem" value="f">
+            <!-- Botão de opção para escolher Feminino como valor enviado. -->
+            <label for="isxfem">Feminino</label>
+            <!-- Rótulo para a opção Feminino. -->
+        </fieldset>
+        <fieldset>
+            <!-- Agrupa opções de esportes favoritos onde múltiplas escolhas são permitidas. -->
+            <legend>Esportes Favoritos</legend>
+            <!-- Título do grupo de checkboxes que explica o tema das opções. -->
+            <input type="checkbox" name="esfut" id="iesfut" checked>
+            <!--
+                Checkbox para escolher Futebol.
+                - type="checkbox": permite uma seleção independente.
+                - name="esfut": nome do campo enviado no formulário.
+                - id="iesfut": identificador usado pelo label.
+                - checked: opção selecionada por padrão.
+            -->
+            <label for="iesfut">Futebol</label>
+            <!-- Rótulo que descreve a opção Futebol -->
+            <br>
+            <input type="checkbox" name="esbas" id="iesbas">
+            <!-- Checkbox para escolher Basquete. -->
+            <label for="iesbas">Basquete</label>
+            <br>
+            <input type="checkbox" name="esvol" id="iesvol">
+            <!-- Checkbox para escolher Volei. -->
+            <label for="iesvol">Volei</label>
+            <br>
+            <input type="checkbox" name="esten" id="iesten">
+            <!-- Checkbox para escolher Tênis. -->
+            <label for="iesten">Tênis</label>
+            <br>
+            <input type="checkbox" name="esnat" id="iesnat">
+            <!-- Checkbox para escolher Natação. -->
+            <label for="iesnat">Natação</label>
+
+        </fieldset>
+
+
+
+        <p>
+            <!-- Botão para enviar os dados do formulário ao destino definido em 'action'. -->
+            <input type="submit" value="Enviar">
+            <!-- Botão que limpa todos os campos do formulário, restaurando seus valores iniciais. -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>

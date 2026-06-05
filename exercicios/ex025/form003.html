@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Declara o documento como HTML5 -->
+<html lang="pt-br">
+<!-- Inicia o documento HTML e define o idioma como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a escala da página para dispositivos móveis e garante boa exibição em telas pequenas -->
+    <title>Formulário</title>
+    <!-- Define o título exibido na aba do navegador -->
+</head>
+
+<body>
+    <h1>Teste de Formulário</h1>
+    <!-- Título principal da página -->
+    <form action="#" method="get" autocomplete="on">
+        <!-- Elemento de formulário que envia os dados usando GET para a mesma página -->
+        <!-- autocomplete="on" permite que o navegador sugira valores salvos conforme o usuário digita -->
+        <p>
+            <!-- Rótulo vinculado ao campo de nome pelo atributo for -->
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" maxlength="30" placeholder="Nome completo" autocomplete="name"
+                required>
+            <!-- Campo de texto para inserir o nome completo, com limite de 30 caracteres e preenchimento obrigatório -->
+        </p>
+        <p>
+            <!-- Rótulo vinculado ao campo de média escolar -->
+            <label for="imedia">Media</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5" required>
+            <!-- Campo numérico para informar a média, com valores entre 0 e 10 e incrementos de 0,5 -->
+        </p>
+        <p>
+            <!-- Rótulo para o campo de mês/ano do período letivo -->
+            <label for="imes">Periodo Letivo</label>
+            <input type="month" name="mes" id="imes">
+            <!-- Campo que permite escolher mês e ano para o período letivo -->
+        </p>
+
+        <p>
+            <!-- Rótulo para o campo de data da prova -->
+            <label for="idia">Dia da prova</label>
+            <input type="date" name="dia" id="idia">
+            <!-- Campo de data que permite selecionar o dia da prova -->
+        </p>
+        <p>
+            <!-- Rótulo para o campo de hora da prova -->
+            <label for="ihora">Hora da prova</label>
+            <input type="time" name="hora" id="ihora">
+            <!-- Campo de horário que permite informar a hora da prova -->
+        </p>
+
+        <p>
+            <!-- Botão para enviar os dados do formulário -->
+            <input type="submit" value="Enviar">
+            <!-- Botão para limpar todos os campos preenchidos no formulário -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>
