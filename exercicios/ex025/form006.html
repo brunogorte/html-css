@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Declara o documento como HTML5 -->
+<html lang="pt-br">
+<!-- Elemento raiz do documento; lang="pt-br" indica que o idioma principal é português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentuação e símbolos especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a escala da página em dispositivos móveis para garantir melhor exibição em diferentes tamanhos de tela -->
+    <title>Formulário</title>
+    <!-- Título da página exibido na aba do navegador -->
+</head>
+
+<body>
+    <h1>Exemplo de formulário </h1>
+    <!-- Cabeçalho principal que descreve a finalidade desta página -->
+    <form action="#" method="post">
+        <!-- Formulário HTML para enviar dados do usuário.
+             - action="#": os dados serão enviados para a mesma página (comportamento de exemplo).
+             - method="post": envia os dados no corpo da requisição, não na URL.
+        -->
+        <p>
+            <!-- Bloco de parágrafo usado para separar visualmente os campos do formulário -->
+            <label for="icor">Cor</label>
+            <!-- Rótulo vinculado ao campo de cor pelo atributo for -->
+            <input type="color" name="cor" id="icor" value="#00ff00">
+            <!--
+                Campo de seleção de cor.
+                - type="color": permite escolher uma cor usando o seletor de cores do navegador.
+                - name="cor": nome do campo enviado no formulário.
+                - id="icor": identificador único que conecta o input ao label.
+                - value="#00ff00": valor inicial padrão definido como verde.
+            -->
+        </p>
+        <p>
+            <!-- Bloco de parágrafo para separar o controle de nível de satisfação -->
+            <label for="inivel">Nivel de satisfação</label>
+            <!-- Rótulo para o controle de faixa (slider) -->
+            <input type="range" name="nivel" id="inivel" min="1" max="10" value="3">
+            <!--
+                Controle deslizante para selecionar um valor numérico.
+                - type="range": exibe um slider para escolher valores dentro de um intervalo.
+                - name="nivel": nome do campo enviado no formulário.
+                - id="inivel": identificador único usado pelo label.
+                - min="1": valor mínimo permitido.
+                - max="10": valor máximo permitido.
+                - value="3": valor inicial definido como 3.
+            -->
+        </p>
+        <p>
+            <!-- Bloco de parágrafo para separar o campo de upload de arquivo -->
+            <label for="ifoto">Foto do perfil</label>
+            <!-- Rótulo para o campo de envio de arquivo -->
+            <input type="file" name="foto" id="ifoto">
+            <!--
+                Campo de arquivo para enviar uma imagem ou outro documento.
+                - type="file": permite ao usuário escolher um arquivo do dispositivo.
+                - name="foto": nome do campo enviado no formulário.
+                - id="ifoto": identificador único usado pelo label.
+            -->
+        </p>
+
+        <p>
+            <!-- Botão para enviar os dados do formulário ao destino definido em 'action'. -->
+            <input type="submit" value="Enviar">
+            <!-- Botão que limpa todos os campos do formulário, restaurando seus valores iniciais. -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>
