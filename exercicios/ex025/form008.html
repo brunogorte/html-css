@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Declara o documento como HTML5 -->
+<html lang="pt-br">
+<!-- Elemento raiz HTML; lang="pt-br" indica que o idioma principal é português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentuação e símbolos especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a escala da página em dispositivos móveis para garantir uma exibição adequada em telas pequenas -->
+    <title>Document</title>
+    <!-- Título exibido na aba do navegador -->
+</head>
+
+<body>
+    <h1>Exemplo de formulário</h1>
+    <!-- Cabeçalho principal que descreve o propósito da página -->
+    <form action="#" method="post" autocomplete="on">
+        <!-- Formulário HTML para envio de dados.
+         - action="#": os dados são enviados para a mesma URL (comportamento de exemplo).
+         - method="post": envia os dados no corpo da requisição HTTP.
+         - autocomplete="on": permite preenchimento automático pelo navegador.
+    -->
+        <p>
+            <!-- Parágrafo que agrupa o primeiro campo numérico -->
+            <label for="in1">Numero 1:</label>
+            <!-- Rótulo vinculado ao input de número 1 pelo atributo for -->
+            <input type="number" name="n1" id="in1" min="0" max="50" required
+                oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            <!--
+                Campo numérico para o primeiro valor.
+                - type="number": permite entrada numérica com controles de incremento do navegador.
+                - name="n1": nome do campo enviado no formulário.
+                - id="in1": identifica o campo para labels e scripts.
+                - min="0": valor mínimo permitido.
+                - max="50": valor máximo permitido.
+                - required: torna o campo obrigatório.
+                - oninput="...": executa código JavaScript sempre que o valor muda, atualizando a soma.
+            -->
+        </p>
+
+        <p>
+            <label for="in2">Numero 2:</label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required
+                oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            <!--
+                Campo numérico para o segundo valor.
+                - type="number": permite entrada numérica com incremento.
+                - name="n2": nome do campo enviado no formulário.
+                - id="in2": identifica o campo para labels e scripts.
+                - min="0": valor mínimo permitido.
+                - max="50": valor máximo permitido.
+                - required: torna o campo obrigatório.
+                - oninput="...": atualiza a soma ao digitar, usando os valores dos dois campos.
+            -->
+        </p>
+        <p>
+            <label for="isoma">Soma</label>
+            <!-- Rótulo para o elemento de saída que mostra o resultado da soma -->
+            <output name="soma" id="isoma">0</output>
+            <!--
+                Elemento de saída para exibir o resultado.
+                - name="soma": nome associado ao output, útil para scripts e acessibilidade.
+                - id="isoma": identifica o elemento para o código oninput.
+                - 0: valor inicial mostrado antes de qualquer entrada.
+            -->
+        </p>
+
+        <p>
+            <!-- Botão para enviar os dados do formulário ao destino definido em 'action'. -->
+            <input type="submit" value="Enviar">
+            <!-- Botão que limpa todos os campos do formulário, restaurando seus valores iniciais. -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>

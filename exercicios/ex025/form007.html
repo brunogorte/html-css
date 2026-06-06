@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Declara que o documento é HTML5 -->
+<html lang="pt-br">
+<!-- Elemento raiz HTML; lang="pt-br" indica que o idioma principal é português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentuação e símbolos especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a escala da página em dispositivos móveis para garantir melhor exibição em telas pequenas -->
+    <title>Formulário</title>
+    <!-- Texto exibido na aba do navegador e usado como título da página -->
+</head>
+
+<body>
+    <h1>Exenplo de formulário</h1>
+    <!-- Cabeçalho principal que descreve a finalidade do formulário -->
+
+    <form action="#" method="post" autocomplete="on">
+        <!-- Formulário HTML para enviar dados do usuário.
+         - action="#": envia os dados para a mesma URL (comportamento de exemplo).
+         - method="post": envia os dados no corpo da requisição.
+         - autocomplete="on": permite preenchimento sugerido pelo navegador.
+    -->
+        <p>
+            <!-- Parágrafo usado para agrupar visualmente o campo de seleção de estado -->
+            <label for="iest">Estado</label>
+            <!-- Rótulo associado ao select por meio do atributo for -->
+            <select name="estado" id="iest">
+                <!-- Menu suspenso (select) para escolher um estado -->
+                <option value="" selecte>---Escolha---</option>
+                <!-- Opção padrão vazia que orienta o usuário a selecionar um valor -->
+                <optgroup label="Região Sudeste">
+                    <!-- Agrupamento de opções para a Região Sudeste -->
+                    <option value="MG">Minas gerais</option>
+                    <!-- Opção para o estado de Minas Gerais -->
+                    <option value="RJ">Rio de janeiro</option>
+                    <!-- Opção para o estado do Rio de Janeiro -->
+                    <option value="SP">São paulo</option>
+                    <!-- Opção para o estado de São Paulo -->
+                </optgroup>
+
+                <optgroup label="Região sul">
+                    <!-- Agrupamento de opções para a Região Sul -->
+                    <option value="PR">Paraná</option>
+                    <!-- Opção para o estado do Paraná -->
+                    <option value="SC">Santa Catarina</option>
+                    <!-- Opção para o estado de Santa Catarina -->
+                    <option value="RS">Rio grande do sul</option>
+                    <!-- Opção para o estado do Rio Grande do Sul -->
+                </optgroup>
+
+            </select>
+        <p>
+            <!-- Parágrafo para agrupar o campo de profissão e a lista de sugestões -->
+            <label for="iprof">Profissão</label>
+            <!-- Rótulo para o campo de texto de profissão -->
+            <input type="text" name="prof" id="iprof" list="istprof">
+            <!--
+                Campo de texto para informar a profissão.
+                - type="text": campo de texto livre.
+                - name="prof": nome do parâmetro enviado no formulário.
+                - id="iprof": identificador único para o label e scripts.
+                - list="istprof": associa este campo à lista de sugestões abaixo.
+            -->
+            <datalist id="istprof">
+                <!-- Lista de sugestões que aparece enquanto o usuário digita no campo de profissão -->
+                <option value="ADM">Administrador</option>
+                <!-- Sugestão de profissão Administrador -->
+                <option value="PED">Pedreiro</option>
+                <!-- Sugestão de profissão Pedreiro -->
+                <option value="CONT">Contador</option>
+                <!-- Sugestão de profissão Contador -->
+            </datalist>
+        </p>
+
+        <p>
+            <!-- Parágrafo para o campo de mensagem multilinha -->
+            <label for="imsg">Mensagem</label> <br>
+            <!-- Rótulo para o textarea; a quebra de linha posiciona o campo abaixo do label -->
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            <!--
+                Campo de texto multilinha para a mensagem.
+                - name="msg": nome do parâmetro enviado no formulário.
+                - id="imsg": identificador usado pelo label.
+                - cols="30": largura aproximada em colunas de texto.
+                - rows="10": altura em linhas de texto.
+            -->
+        </p>
+
+        <p>
+            <!-- Botão para enviar os dados do formulário ao destino definido em 'action'. -->
+            <input type="submit" value="Enviar">
+            <!-- Botão que limpa todos os campos do formulário, restaurando seus valores iniciais. -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>
